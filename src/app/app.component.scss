@@ -3,87 +3,100 @@
     margin-top:-20px;
     z-index:1;
     font-size:12px;
-    }
-    
-    .label-txt {
+}
+
+.label-txt {
     float: left;
     font-size: 1.5em;
     color: blue;
-    }
-    
-    .label-percent {
+}
+
+.label-percent {
     font-size: 1.5em;
     color: blue;
-    }
-    
-    .label-line {
+}
+
+.label-line {
     float: top;
     background: black;
     height:30px;
     width:2px;
     margin-left: 5px;
     line-height: 80px;
-    }
-    
-    .label-percent {
+}
+
+.label-percent {
     float: right;
     line-height: 40px;
     font-size: 1.5em;
-    }
-    
-    .progress-bar {
+}
+
+.progress-bar {
     height: 40px;
     line-height: 40px;
     text-align: center;
     font-size: 1.5em;
-    }
-    
-    .kickOffText {
+}
+
+.kickOffText {
     font-size: 1.5em;
     font-weight: 400;
-    }
-    
-    .issue {
+}
+
+.issue {
     color: red;
-    }
-    
-    .blockText {
+}
+
+.blockText {
     color: yellow !important;
     filter: none !important;
-    }
-    
-    .timeLine {
+}
+
+.timeLine {
     height: 40px;
     line-height: 10px;
     text-align: center;
     font-size: 1.5em;
-    }
-    
-    .timeLineRow {
+}
+
+.timeLineRow {
     text-align: center;
-    }
-    
-    table > tr {
+}
+
+table > tr {
     border-radius: 15px;
-    }
-    
-    .aBlock {
+}
+
+.aBlock {
     color: blue;
-    }
-    
-    .testBlock {
+}
+
+.testBlock {
     background-color: blue;
     color: white;
     border-style: solid;
     border-width: 1px;
     border-color: red;
-    }
-    
-    .timeLineRow > td {
+}
+
+.timeLineRow > td {
     width: 20%;
-    }
-    @media (max-width: 994px){
+}
+@media (max-width: 994px){
     .aBlock {
         font-size: 12px;
     }
-    }
+}
+
+.timeLine {
+    width: 100%;
+}
+
+.fullrow {
+    width: 100%;
+}
+
+td {
+    color: black !important;
+    padding-bottom: 5px;
+}

@@ -35,22 +35,22 @@ export class AppComponent implements OnInit {
         this.date = new Date;
         this.testConfig = [
             {
-                name: 'Stage 1',
+                name: 'Kickoff',
                 startProject: new Date('9/1/2016'),
                 endProject: new Date('5/15/2017'),
             },
             {
-                name: 'Stage 2',
+                name: 'Screening',
                 startProject: new Date('5/16/2017'),
                 endProject: new Date('8/17/2017'),
             },
             {
-                name: 'Stage 3',
+                name: 'Hit Validation',
                 startProject: new Date('8/18/2018'),
                 endProject: new Date('2/25/2018'),
             },
             {
-                name: 'Stage 4',
+                name: 'Closeout',
                 startProject: new Date('2/26/2018'),
                 endProject: new Date('7/28/2018'),
             }
