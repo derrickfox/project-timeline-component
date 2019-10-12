@@ -1,10 +1,11 @@
 <table class="fullrow">   
   <tr class="timeLineRow">
-    <td>{{earliestYear}}</td>
+    <td class="pullLeft">{{earliestYear}}</td>
     <td>|</td>
-    <td>{{((latestYear - earliestYear) / 2) + earliestYear}}</td>
+    <td>{{projectDuration}}</td>
+    <td ng-if="ifExpression">{{middleYear}}</td>
     <td>|</td>
-    <td>{{latestYear}}</td>
+    <td class="pullRight">{{latestYear}}</td>
   </tr>
 </table>
 <table class="container-fluid timeLine">

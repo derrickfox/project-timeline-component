@@ -28,11 +28,36 @@ export class AppComponent implements OnInit {
     myColor: any;
     arrayOfCell: any;
     myClass: any;
+    ifExpression: any;
+    middleYear: any;
+    projectDuration: any;
 
     constructor() { }
 
     ngOnInit() {
         this.date = new Date;
+        // this.testConfig = [
+        //     {
+        //         name: 'Kickoff',
+        //         startProject: new Date('9/1/2016'),
+        //         endProject: new Date('5/15/2017'),
+        //     },
+        //     {
+        //         name: 'Screening',
+        //         startProject: new Date('5/16/2017'),
+        //         endProject: new Date('8/17/2017'),
+        //     },
+        //     {
+        //         name: 'Hit Validation',
+        //         startProject: new Date('8/18/2018'),
+        //         endProject: new Date('2/25/2018'),
+        //     },
+        //     {
+        //         name: 'Closeout',
+        //         startProject: new Date('2/26/2018'),
+        //         endProject: new Date('7/28/2018'),
+        //     }
+        // ];
         this.testConfig = [
             {
                 name: 'Kickoff',
@@ -52,7 +77,7 @@ export class AppComponent implements OnInit {
             {
                 name: 'Closeout',
                 startProject: new Date('2/26/2018'),
-                endProject: new Date('7/28/2018'),
+                endProject: new Date('7/28/2019'),
             }
         ];
 
@@ -70,6 +95,9 @@ export class AppComponent implements OnInit {
         this.testColor = "red";
         this.myColor = '#c4ffd9';
         this.arrayOfCell = [];
+        this.ifExpression = false;
+        this.middleYear;
+        this.projectDuration;
     }
 
     getDateRange() {
@@ -127,6 +155,15 @@ export class AppComponent implements OnInit {
     drawTimeLine() {
         this.earliestYear = this.startDate.getFullYear();
         this.latestYear = this.endDate.getFullYear();
+        this.projectDuration = this.latestYear - this.earliestYear;
+        // if(this.projectDuration % 2 === 0){
+        //     this.middleYear = ((this.latestYear - this.earliestYear) / 2);
+        //     this.middleYear = this.earliestYear + this.middleYear;
+        // }else{
+        //     this.middleYear = ((this.latestYear - this.earliestYear) / 2);
+        //     this.middleYear = Math.floor(this.middleYear);
+        //     this.middleYear = this.earliestYear + this.middleYear;
+        // }
         let lengthOfThisProject = this.getNumOfMonths(this.beginDay, this.endDay);
         let arrayOfWidths = [];
         this.testConfig.forEach(i => {
@@ -137,33 +174,22 @@ export class AppComponent implements OnInit {
     }
 
     lightenDarkenColor(col, amt) {
-
         var usePound = false;
-
         if (col[0] == "#") {
             col = col.slice(1);
             usePound = true;
         }
-
         var num = parseInt(col, 16);
-
         var r = (num >> 16) + amt;
-
         if (r > 255) r = 255;
         else if (r < 0) r = 0;
-
         var b = ((num >> 8) & 0x00FF) + amt;
-
         if (b > 255) b = 255;
         else if (b < 0) b = 0;
-
         var g = (num & 0x0000FF) + amt;
-
         if (g > 255) g = 255;
         else if (g < 0) g = 0;
-
         return (usePound ? "#" : "") + (g | (b << 8) | (r << 16)).toString(16);
-
     }
 
     printTestConfig() {
