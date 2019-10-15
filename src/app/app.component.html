@@ -54,23 +54,22 @@
 </table>
 
 <div style="border: 1px solid green; width: 100%; padding: 20px;">
-
-      <table class="container-fluid timeLine">
-        <tr class="sitOnTop">
-          <td *ngFor="let i of testConfig; index as num" [ngStyle]="{'width': i.percentage+'%'}" style="text-align: left;"  ngClass="myClass">{{i.name}}</td>
-        </tr>
-        <tr>
-          <td *ngFor="let i of testConfig; index as num" [ngStyle]="{'background-color': i.color, 'height': ((i.percentage)*3)+'%', 'width': i.percentage+'%'}" ngClass="myClass" class="aBlock">{{drawCell(i,num)}}</td>
+    <table class="container-fluid timeLine">
+      <tr class="sitOnTop">
+        <td *ngFor="let i of testConfig; index as num" [ngStyle]="{'width': i.percentage+'%'}" style="text-align: left; padding-bottom: 15px !important;"  ngClass="myClass">{{i.name}}</td>
+      </tr>
+      <tr>
+        <td *ngFor="let i of testConfig; index as num" [ngStyle]="{'background-color': i.color, 'height': ((i.percentage)*3)+'%', 'width': i.percentage+'%'}" ngClass="myClass" class="aBlock">{{drawCell(i,num)}}</td>
+      </tr>
+    </table>
+    <table class="fullrow">   
+        <tr class="timeLineRow">
+          <td class="pullLeft">{{earliestYear}}</td>
+          <td>|</td>
+          <td>{{projectDuration}}</td>
+          <td ng-if="ifExpression">{{middleYear}}</td>
+          <td>|</td>
+          <td class="pullRight">{{latestYear}}</td>
         </tr>
       </table>
-      <table class="fullrow">   
-          <tr class="timeLineRow">
-            <td class="pullLeft">{{earliestYear}}</td>
-            <td>|</td>
-            <td>{{projectDuration}}</td>
-            <td ng-if="ifExpression">{{middleYear}}</td>
-            <td>|</td>
-            <td class="pullRight">{{latestYear}}</td>
-          </tr>
-        </table>
 </div>
