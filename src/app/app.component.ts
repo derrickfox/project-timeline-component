@@ -36,28 +36,6 @@ export class AppComponent implements OnInit {
 
     ngOnInit() {
         this.date = new Date;
-        // this.testConfig = [
-        //     {
-        //         name: 'Kickoff',
-        //         startProject: new Date('9/1/2016'),
-        //         endProject: new Date('5/15/2017'),
-        //     },
-        //     {
-        //         name: 'Screening',
-        //         startProject: new Date('5/16/2017'),
-        //         endProject: new Date('8/17/2017'),
-        //     },
-        //     {
-        //         name: 'Hit Validation',
-        //         startProject: new Date('8/18/2018'),
-        //         endProject: new Date('2/25/2018'),
-        //     },
-        //     {
-        //         name: 'Closeout',
-        //         startProject: new Date('2/26/2018'),
-        //         endProject: new Date('7/28/2018'),
-        //     }
-        // ];
         this.testConfig = [
             {
                 name: 'Kickoff',
@@ -77,7 +55,7 @@ export class AppComponent implements OnInit {
             {
                 name: 'Closeout',
                 startProject: new Date('2/26/2018'),
-                endProject: new Date('7/28/2019'),
+                endProject: new Date('7/28/2018'),
             }
         ];
 
@@ -156,14 +134,6 @@ export class AppComponent implements OnInit {
         this.earliestYear = this.startDate.getFullYear();
         this.latestYear = this.endDate.getFullYear();
         this.projectDuration = this.latestYear - this.earliestYear;
-        // if(this.projectDuration % 2 === 0){
-        //     this.middleYear = ((this.latestYear - this.earliestYear) / 2);
-        //     this.middleYear = this.earliestYear + this.middleYear;
-        // }else{
-        //     this.middleYear = ((this.latestYear - this.earliestYear) / 2);
-        //     this.middleYear = Math.floor(this.middleYear);
-        //     this.middleYear = this.earliestYear + this.middleYear;
-        // }
         let lengthOfThisProject = this.getNumOfMonths(this.beginDay, this.endDay);
         let arrayOfWidths = [];
         this.testConfig.forEach(i => {
