@@ -90,8 +90,6 @@ table > tr {
 
 .timeLine {
     width: 100%;
-    border-bottom: dotted 2px black;
-    border-width: 3px;
     padding-bottom: 3px;
     height: 100px;
 }
@@ -115,4 +113,12 @@ td {
 
 h4 {
     font-style: italic;
+}
+
+.aBlock:last-child {
+    background-color: #E8E8E8 !important;
+}
+
+.aBlock:first-child {
+    background-color: #E8E8E8 !important;
 }

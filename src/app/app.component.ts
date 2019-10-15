@@ -40,16 +40,16 @@ export class AppComponent implements OnInit {
             {
                 name: 'Kickoff',
                 startProject: new Date('9/1/2016'),
-                endProject: new Date('5/15/2017'),
+                endProject: new Date('1/15/2017'),
             },
             {
                 name: 'Screening',
-                startProject: new Date('5/16/2017'),
-                endProject: new Date('8/17/2017'),
+                startProject: new Date('1/16/2017'),
+                endProject: new Date('3/15/2017'),
             },
             {
                 name: 'Hit Validation',
-                startProject: new Date('8/18/2018'),
+                startProject: new Date('3/16/2017'),
                 endProject: new Date('2/25/2018'),
             },
             {

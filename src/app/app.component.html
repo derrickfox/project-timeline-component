@@ -16,7 +16,8 @@
   });
 </script>  
 
-<table class="fullRow" style="border: 2px solid blue; width: 100%;">
+<h3>Project Timeline</h3>
+<table class="fullRow">
   <tr>
     <td>
         <h4>Project Phase</h4>
@@ -32,16 +33,7 @@
         </div>
     </td>
     <td>
-        <h4>Phase Start</h4>
-        <div class='input-group date' id='datetimepicker1'>
-            <input type='text' class="form-control" />
-            <span class="input-group-addon">
-                <span class="glyphicon glyphicon-calendar"></span>
-            </span>
-        </div>
-    </td>
-    <td style="padding-left: 20px; padding-right: 20px;">
-      <h4>Phase End</h4>
+      <h4>Phase Start</h4>
       <div class='input-group date' id='datetimepicker1'>
           <input type='text' class="form-control" />
           <span class="input-group-addon">
@@ -49,28 +41,36 @@
           </span>
       </div>
     </td>
-
-
+    <td style="padding-left: 20px; padding-right: 20px;">
+      <h4>Phase End</h4>
+      <div class='input-group date' id='datetimepicker2'>
+          <input type='text' class="form-control" />
+          <span class="input-group-addon">
+              <span class="glyphicon glyphicon-calendar"></span>
+          </span>
+      </div>
+    </td>
   </tr>
 </table>
 
-<table class="fullrow">   
-  <tr class="timeLineRow">
-    <td class="pullLeft">{{earliestYear}}</td>
-    <td>|</td>
-    <td>{{projectDuration}}</td>
-    <td ng-if="ifExpression">{{middleYear}}</td>
-    <td>|</td>
-    <td class="pullRight">{{latestYear}}</td>
-  </tr>
-</table>
-<table class="container-fluid timeLine">
-  <tr class="sitOnTop">
-    <td *ngFor="let i of testConfig; index as num" [ngStyle]="{'width': i.percentage+'%'}" style="text-align: left;"  ngClass="myClass" class="aBlock">{{i.name}}</td>
-  </tr>
-  <tr>
-    <td *ngFor="let i of testConfig; index as num" [ngStyle]="{'background-color': i.color, 'height': ((i.percentage)*3)+'%', 'width': i.percentage+'%'}"  ngClass="myClass" class="aBlock">{{drawCell(i,num)}}</td>
-  </tr>
-</table>
-<br>
-<h4 class="kickOffText">Kick Off Date: <span class="dateText">{{date | date}}</span></h4>
+<div style="border: 1px solid green; width: 100%; padding: 20px;">
+
+      <table class="container-fluid timeLine">
+        <tr class="sitOnTop">
+          <td *ngFor="let i of testConfig; index as num" [ngStyle]="{'width': i.percentage+'%'}" style="text-align: left;"  ngClass="myClass">{{i.name}}</td>
+        </tr>
+        <tr>
+          <td *ngFor="let i of testConfig; index as num" [ngStyle]="{'background-color': i.color, 'height': ((i.percentage)*3)+'%', 'width': i.percentage+'%'}" ngClass="myClass" class="aBlock">{{drawCell(i,num)}}</td>
+        </tr>
+      </table>
+      <table class="fullrow">   
+          <tr class="timeLineRow">
+            <td class="pullLeft">{{earliestYear}}</td>
+            <td>|</td>
+            <td>{{projectDuration}}</td>
+            <td ng-if="ifExpression">{{middleYear}}</td>
+            <td>|</td>
+            <td class="pullRight">{{latestYear}}</td>
+          </tr>
+        </table>
+</div>
