@@ -10,21 +10,49 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<div class="btn-toolbar justify-content-between float-left" role="toolbar" aria-label="Toolbar with button groups">
-  <div class="btn-group" role="group" aria-label="First group">
-    <button type="button" class="btn btn-secondary">Assay Dev</button>
-    <button type="button" class="btn btn-secondary">Pilot Work</button>
-    <button type="button" class="btn btn-secondary">Screening</button>
-    <button type="button" class="btn btn-secondary">Hit Validation</button>
-    <button type="button" class="btn btn-secondary">Med Chem</button>
-    <button type="button" class="btn btn-secondary">Advanced Studies</button>
-  </div>
-</div>
+<script type="text/javascript">
+  $(function () {
+      $('#datetimepicker1').datetimepicker();
+  });
+</script>  
 
-<div>
-    <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> <span class="glyphicon-class">glyphicon glyphicon-calendar</span> 
+<table class="fullRow" style="border: 2px solid blue; width: 100%;">
+  <tr>
+    <td>
+        <h4>Project Phase</h4>
+        <div class="btn-toolbar justify-content-between float-left" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group" role="group" aria-label="First group">
+            <button type="button" class="btn btn-secondary">Assay Dev</button>
+            <button type="button" class="btn btn-secondary">Pilot Work</button>
+            <button type="button" class="btn btn-secondary">Screening</button>
+            <button type="button" class="btn btn-secondary">Hit Validation</button>
+            <button type="button" class="btn btn-secondary">Med Chem</button>
+            <button type="button" class="btn btn-secondary">Advanced Studies</button>
+          </div>
+        </div>
+    </td>
+    <td>
+        <h4>Phase Start</h4>
+        <div class='input-group date' id='datetimepicker1'>
+            <input type='text' class="form-control" />
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+        </div>
+    </td>
+    <td style="padding-left: 20px; padding-right: 20px;">
+      <h4>Phase End</h4>
+      <div class='input-group date' id='datetimepicker1'>
+          <input type='text' class="form-control" />
+          <span class="input-group-addon">
+              <span class="glyphicon glyphicon-calendar"></span>
+          </span>
+      </div>
+    </td>
 
-</div>
+
+  </tr>
+</table>
 
 <table class="fullrow">   
   <tr class="timeLineRow">
